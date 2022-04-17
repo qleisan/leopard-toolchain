@@ -52,3 +52,7 @@ RUN apt install unzip
 COPY SDK_2.3.0_MK22FN512xxx12.zip /home
 RUN cd /home && unzip SDK_2.3.0_MK22FN512xxx12.zip -d /home/SDK
 
+ENV MYSDKPATH /home/SDK
+
+RUN apt install -y python2.7
+RUN cd /usr/bin && ln -s python2.7 python2
