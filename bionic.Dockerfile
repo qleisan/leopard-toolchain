@@ -56,3 +56,6 @@ ENV MYSDKPATH /home/SDK
 
 RUN apt install -y python2.7
 RUN cd /usr/bin && ln -s python2.7 python2
+
+RUN apt-get update && \
+    apt install -y git
